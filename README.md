@@ -11,7 +11,7 @@ These appear to be somewhat evenly distributed. The beginning and end regions ar
 - A random seed is a numerical string that serves as the input to a the function that makes up a deterministic pseudo-random number generator. The output must be pseudo-random in that its distribution closely resembles a random distribution, and would not vary in a clear pattern with respect to the input seed's value. The same seed applied to the function will produce the same output every time. This makes seeds useful for reproducibility in that a large pseudo-random distribution can be summarised and shared by a short seed plus the function, that together necessarily entail the distribution. It is easier to share a seed and a function than it is to share a large dataset of random elements. For a set of pseudo-random simulations if you set a seed beforehand, the set of simulations will still be pseudo-random but replicable every time the program is reset and the set of simulation results created again.
 
 - ![image](https://github.com/solarproblems/reproducible-research_homework/assets/152936548/3454fda7-58d5-4d97-b6ad-546010aa96cb)
-This comparison shows the reproducibility elements (adding a seed, storing the package versions) on the left because I didn't commit an earlier version, so I had to then remove those to show the differences
+This comparison shows the reproducibility elements (adding a seed, storing the package versions) highlighted in red on the left because I didn't commit an earlier version, so I had to then remove those to show the differences. Either way it shows the changes I made.
 
 - 
 
