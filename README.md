@@ -1,5 +1,25 @@
 # Reproducible research: version control and R
 
+## Answer section
+
+*Questions 1, 2, 3* https://github.com/solarproblems/logistic_growth
+
+*Question 4* 
+- Both iterations of a random walk produce a path that ranges across at least 10 square spatial units, with some regions where it loops back on itself and some regions with no looping. 
+These appear to be somewhat evenly distributed. The beginning and end regions are not necessarily distant from one another, and in one case the end region is very close to the origin.
+
+- A random seed is a numerical string that serves as the input to a the function that makes up a deterministic pseudo-random number generator. The output must be pseudo-random in that its distribution closely resembles a random distribution, and would not vary in a clear pattern with respect to the input seed's value. The same seed applied to the function will produce the same output every time. This makes seeds useful for reproducibility in that a large pseudo-random distribution can be summarised and shared by a short seed plus the function, that together necessarily entail the distribution. It is easier to share a seed and a function than it is to share a large dataset of random elements. For a set of pseudo-random simulations if you set a seed beforehand, the set of simulations will still be pseudo-random but replicable every time the program is reset and the set of simulation results created again.
+
+- ![image](https://github.com/solarproblems/reproducible-research_homework/assets/152936548/3454fda7-58d5-4d97-b6ad-546010aa96cb)
+This comparison shows the reproducibility elements (adding a seed, storing the package versions) on the left because I didn't commit an earlier version, so I had to then remove those to show the differences
+
+- 
+
+
+
+
+
+
 ## Instructions
 
 The homework for this Computer skills practical is divided into 5 questions for a total of 100 points (plus an optional bonus question worth 10 extra points). First, fork this repo and make sure your fork is made **Public** for marking. Answers should be added to the # INSERT ANSWERS HERE # section above in the **README.md** file of your forked repository.
