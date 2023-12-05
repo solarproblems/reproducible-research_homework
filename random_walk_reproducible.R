@@ -4,9 +4,6 @@ install.packages("gridExtra")
 library(ggplot2)
 library(gridExtra)
 
-set.seed(6)#an arbitrarily chosen seed, always gives same 2 random walks as here
-
-
 random_walk  <- function (n_steps) {
   
   df <- data.frame(x = rep(NA, n_steps), y = rep(NA, n_steps), time = 1:n_steps)
@@ -58,8 +55,3 @@ plot2 <- ggplot(aes(x = x, y = y), data = data2) +
 
 grid.arrange(plot1, plot2, ncol=2)
 
-
-
-sink(file = "package-versions.txt")
-sessionInfo()
-sink()
