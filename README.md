@@ -26,7 +26,10 @@ t=4980 sits in the region of this logistic function where N is almost equal to K
 
 
 *Question 3.*
-Graph included in repo.
+
+
+![image](https://github.com/solarproblems/reproducible-research_homework/assets/152936548/3d962180-6271-4daf-b6dd-37048c06cf4b)
+
 
 
 
