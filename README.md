@@ -11,6 +11,8 @@ These appear to be somewhat evenly distributed. The beginning and end regions ar
 - A random seed is a numerical string that serves as the input to a the function that makes up a deterministic pseudo-random number generator. The output must be pseudo-random in that its distribution closely resembles a random distribution, and would not vary in a clear pattern with respect to the input seed's value. The same seed applied to the function will produce the same output every time. This makes seeds useful for reproducibility in that a large pseudo-random distribution can be summarised and shared by a short seed plus the function, that together necessarily entail the distribution. It is easier to share a seed and a function than it is to share a large dataset of random elements. For a set of pseudo-random simulations if you set a seed beforehand, the set of simulations will still be pseudo-random but replicable every time the program is reset and the set of simulation results created again.
 
 - ![image](https://github.com/solarproblems/reproducible-research_homework/assets/152936548/3454fda7-58d5-4d97-b6ad-546010aa96cb)
+
+
 This comparison shows the reproducibility elements (adding a seed, storing the package versions) highlighted in red on the left because I didn't commit an earlier version, so I had to then remove those to show the differences. Either way it shows the changes I made, the two versions in the history are just the other way around. 
 
 
@@ -23,8 +25,11 @@ This comparison shows the reproducibility elements (adding a seed, storing the p
 -The regression produces an estimate for an exponent of 1.52 with a p value of 6.44x10^-10. The estimate for the scaling factor is 1182, a back transformation of the intercept 7.0748, with a p value of 2.28x10^-10. Both are significant at the 0.001 level. In addition both values match those obtained by the original researchers through their analysis.  
 
 - ![image](https://github.com/solarproblems/reproducible-research_homework/assets/152936548/7767d518-2ca5-4da8-bf6a-307ce75a8fef)
+
 ('table' is the name given to the dataset earlier in the code)
+
 ![image](https://github.com/solarproblems/reproducible-research_homework/assets/152936548/199806f0-2459-42f9-9825-df18d3d15c55)
+
 And here is the code output. 
 
 - Using our linear model we can produce an estimate for virion volume from a genome length. For 300kb, using our raw model outputs for a log-log transformation,
