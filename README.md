@@ -11,13 +11,36 @@ These appear to be somewhat evenly distributed. The beginning and end regions ar
 - A random seed is a numerical string that serves as the input to a the function that makes up a deterministic pseudo-random number generator. The output must be pseudo-random in that its distribution closely resembles a random distribution, and would not vary in a clear pattern with respect to the input seed's value. The same seed applied to the function will produce the same output every time. This makes seeds useful for reproducibility in that a large pseudo-random distribution can be summarised and shared by a short seed plus the function, that together necessarily entail the distribution. It is easier to share a seed and a function than it is to share a large dataset of random elements. For a set of pseudo-random simulations if you set a seed beforehand, the set of simulations will still be pseudo-random but replicable every time the program is reset and the set of simulation results created again.
 
 - ![image](https://github.com/solarproblems/reproducible-research_homework/assets/152936548/3454fda7-58d5-4d97-b6ad-546010aa96cb)
-This comparison shows the reproducibility elements (adding a seed, storing the package versions) highlighted in red on the left because I didn't commit an earlier version, so I had to then remove those to show the differences. Either way it shows the changes I made.
-
-- 
+This comparison shows the reproducibility elements (adding a seed, storing the package versions) highlighted in red on the left because I didn't commit an earlier version, so I had to then remove those to show the differences. Either way it shows the changes I made, the two versions in the history are just the other way around. 
 
 
+*Question 5*
+
+-The table has 13 columns and 33 rows. 
+
+-I use a natural log transformation on both axes.
+
+-The regression produces an estimate for an exponent of 1.52 with a p value of 6.44x10^-10. The estimate for the scaling factor is 1182, a back transformation of the intercept 7.0748, with a p value of 2.28x10^-10. Both are significant at the 0.001 level. In addition both values match those obtained by the original researchers through their analysis.  
+
+- ![image](https://github.com/solarproblems/reproducible-research_homework/assets/152936548/7767d518-2ca5-4da8-bf6a-307ce75a8fef)
+('table' is the name given to the dataset earlier in the code)
+![image](https://github.com/solarproblems/reproducible-research_homework/assets/152936548/199806f0-2459-42f9-9825-df18d3d15c55)
+And here is the code output. 
+
+- Using our linear model we can produce an estimate for virion volume from a genome length. For 300kb, using our raw model outputs for a log-log transformation,
+  e^(1.5152*log(300) + 7.0748) =  *6697007nm^3*
 
 
+  *Bonus Question*
+
+In scientific research, reproducibility and replicability are different but related concepts. Reproducibility refers to how easy it is to analyse the same existing data repeatedly and come to the same conclusions. Ideally every mechanistic step of the analysis should be repeatable. Replicability, concerns itself with the entire process from data collection to conclusions, and making it possible to repeat all this. Git, and the web based hosting service using it Github, are promising tools for both of these but mainly reproducibility. 
+
+Reproducibility is easier to control as it is limited to the analysis stage. The most basic element is the availability of both the data itself and a comprehensive record of each step used to process it. This ideally includes every step including any cleaning of the most raw data, all the way to the software functions used to calculate summary statistics or fit models. Even software version should be recorded, as updates can alter useful functions. Github allows open online file sharing
+of software and data, and has a rigorous process of saving versions, each recorded stage of alteration of a file, using the software 'Git'. However, the effectiveness of these systems assumes that the order/process in which to use the data and software are either made explicit or are simple enough to easily deduce. Version control also requires discipline by the original researcher, as it cannot capture every keystroke; Useful script may go unsaved or deleted within the session where it is used. Reproducibility also applies less well to any qualitative step, as only mechanistic analyses on numerical data can really be recorded fully. Qualitative judgement and weighting, even of a strong statistical result, cannot be fully controlled.
+
+Replicability can be more difficult at the experimental end, where the object the data is measuring is variable and thus the data would differ even if the same methodology was applied again. The primary exception is where software is used in the data collection, where there is some software step prior to the raw data. For hardware-embedded algorithms such as some acoustic monitoring devices etc., some of the data processing may not be possible to include in a public repository such as Github, and version control is irrelevant. On the other hand, if software is used to generate the data, as in simulation, then there are plenty of protocols available for replicability. Here, all code and versions thereof can be made available on a public host such as Github, and for anything involving a pseudo-random number generator a seed can be used to maintain the random quality of the output but ensure this output is identical every time the code is run, including by other researchers so long as they have the seed. In essence, this makes the data of a simulation more available, improving the reproducibility of any further analyses. 
+
+In its owk right, Github can be deterrent to researchers in that it has a steep learning curve and many features are paywalled for access or amount usable. Git and Githubs's branching system also means that when many researchers work analysis for the same project, there may be some parallel analyses. While the full extent and history of this branching can be made available, reproducibility requires that the data analysis pipeline is clear and linear, a single sequence. Otherwise there may be ambiguity and conflict even when all recorded procedures are followed from a Github repository. 
 
 
 ## Instructions
